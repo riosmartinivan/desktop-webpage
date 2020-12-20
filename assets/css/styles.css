@@ -45,6 +45,11 @@ body {
 	width:52px;
 	height:52px;
     border-radius: 10px;
+    transition: transform 1.5s;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
 }
 
 .header > ul {
