@@ -108,7 +108,7 @@ body {
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    background: #4db6ac;
+    background: linear-gradient(#4db6ac, white);
     min-height: 500px;
     height: auto;
 }
