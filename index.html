@@ -2,17 +2,23 @@
 <html>
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+      <meta name="theme-color" content="#4db6ac">
       <link href="assets/css/styles.css" rel="stylesheet" />
-      <title>Desktop webpage</title>
+      <link rel="shortcut icon" type="image/png" href="assets/img/logo-black-white.png">
+      <meta name="keywords" content="cerveza, artesanal, baldwin, cordoba">
+      <meta name="author" content="Martín Iván Ríos">
+
+      <title>Cerveza Balwin</title>
+      <meta name="description" content="Amor, alegría y, siempre, cerveza bien fría! Cerveza Artesanal elaborada en el corazón de Córdoba">
    </head>
    <body>
 
       <!-- Header -->
-      <header class="header-container">
+      <header id="header-container">
          <nav class="header">
-               <div>
-                  <img class="logo" src="assets/img/logo.png" alt="Logo">
+               <div class="logo-container">
+                  <span class="logo"></span>
                </div>
                <ul>
                   <li><a class="active" href="#content">Home</a></li>
@@ -20,7 +26,7 @@
                   <li><a href="#pricing">Pricing</a></li>
                   <li class="community-submenu"><a href="">Community</a>
                      <ul>
-                        <li><a href="views/community.html#home">Posts</a></li>
+                        <li><a href="#posts">Posts</a></li>
                         <li><a href="#chat">Chat</a></li>
                      </ul>
                   </li>
@@ -34,60 +40,53 @@
       </header>
 
 
+      <section class="main">
+         <div class="background"></div>
+      </section>
+
       <!-- Content -->
       <section class="content">
 
-         <section class="main-content">
-            <div class="iframe-container">
-               <div class="videoWrapper">
-                  <iframe class="video" width="560" height="315"
-                  src="https://www.youtube-nocookie.com/embed/k4kANu9sKns"
-                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+         <section class="display-photos photos-container">
+            <div class="photo-1"></div>
+            <div class="photo-2"></div>
+            <div class="photo-3"></div>
+         </section>
+
+         <section class="new-content">
+            <p>
+               Nuevas cervezas
+            </p>
+            <div class="new-beer-photos photos-container">
+               <div class="photo-1">
+                  <span>Cerveza 1</span>
                </div>
-            </div>
-            <div class="main-text">
-               <h1>Main title</h1>
-               <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores quidem in, autem ullam beatae, a exercitationem non magnam minus debitis quaerat itaque molestiae! Tempore, libero. Iure natus deleniti id.
-               </p>
+               <div class="photo-2">
+                  <span>Cerveza 2</span>
+               </div>
+               <div class="photo-3">
+                  <span>Cerveza 3</span>
+               </div>
             </div>
          </section>
 
-         <div class="features-container">
-            <section class="features">
-               <h2>Features</h2>
-               <ul>
-                  <li>Better than</li>
-                  <li>Faster than</li>
-                  <li>Other</li>
-               </ul>            
-            </section>
-   
-            <section class="pricing">
-               <h2>Pricing</h2>
-               <table border="1">
-                  <tr>
-                     <th>$100</th>
-                     <th>$200</th> 
-                     <th>$300</th>
-                  </tr>
-                  <tr>
-                     <td>Cheap</td>
-                     <td>A little better</td>
-                     <td>Better</td>
-                  </tr>
-               </table>
-            </section>
-         </div>
-
-         <section class="contact">
-            <form>
-               <h2>Contact</h2>
-               <input type="email" name="email" placeholder="Enter your email address"></input>
-               <button>Send</button>
-               <p>We will contact you soon</p>
-            </form>
+         <section class="our-history">
+            <h2>Nuestra historia</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus, officiis, ipsum dolor laborum veritatis nemo ullam iure, maiores recusandae distinctio illo eos soluta! Quo quod architecto rem eveniet similique?
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta, et corporis odit laborum facilis debitis libero repellendus quidem officiis fugit eum deserunt tempore ipsa ratione dolores sapiente eaque ut!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat maxime temporibus commodi quod! Nihil numquam accusantium atque dolores explicabo? Praesentium deserunt distinctio ad natus mollitia perferendis iure suscipit qui?
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus, officiis, ipsum dolor laborum veritatis nemo ullam iure, maiores recusandae distinctio illo eos soluta! Quo quod architecto rem eveniet similique?
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta, et corporis odit laborum facilis debitis libero repellendus quidem officiis fugit eum deserunt tempore ipsa ratione dolores sapiente eaque ut!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat maxime temporibus commodi quod! Nihil numquam accusantium atque dolores explicabo? Praesentium deserunt distinctio ad natus mollitia perferendis iure suscipit qui?
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus, officiis, ipsum dolor laborum veritatis nemo ullam iure, maiores recusandae distinctio illo eos soluta! Quo quod architecto rem eveniet similique?
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta, et corporis odit laborum facilis debitis libero repellendus quidem officiis fugit eum deserunt tempore ipsa ratione dolores sapiente eaque ut!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat maxime temporibus commodi quod! Nihil numquam accusantium atque dolores explicabo? Praesentium deserunt distinctio ad natus mollitia perferendis iure suscipit qui?
+            </p>
+            <p>
+               Gracias por confiar en nosotros!
+            </p>
          </section>
 
       </section>
@@ -95,16 +94,33 @@
 
       <!-- Footer -->
       <footer>
-         <text>Copyright text</text>
+         <ul class="social-container">
+            <li><a target="_blank" href="#facebook-url"><img src="assets/img/facebook-icon.svg" alt="Facebook social button"></a></li>
+            <li><a target="_blank" href="#twitter-url"><img src="assets/img/twitter-icon.svg" alt="Twitter social button"></a></li>
+            <li><a target="_blank" href="http://instagram.com/cerveza.baldwin"><img src="assets/img/instagram-icon.svg" alt="Instagram social button"></a></li>
+         </ul>
       </footer>
 
+      <button onclick="topFunction()" id="go-top"></button> 
 
-      <!-- Fixed social buttons -->
-      <ul class="social-container">
-         <li><a href="#facebook-url"><img src="assets/img/facebook-icon.svg" alt="Facebook social button"></a></li>
-         <li><a href="#twitter-url"><img src="assets/img/twitter-icon.svg" alt="Twitter social button"></a></li>
-         <li><a href="#instagram-url"><img src="assets/img/instagram-icon.svg" alt="Instagram social button"></a></li>
-      </ul>
-
+      <script src="assets/js/scroll.js"></script>
+      <script>
+         var mybutton = document.getElementById("go-top");
+         
+         window.onscroll = function() {scrollFunction()};
+         
+         function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+             mybutton.style.display = "block";
+           } else {
+             mybutton.style.display = "none";
+           }
+         }
+         
+         function topFunction() {
+           document.body.scrollTop = 0;
+           document.documentElement.scrollTop = 0;
+         }
+         </script>
    </body>
 </html>
