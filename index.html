@@ -4,23 +4,28 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
       <meta name="theme-color" content="#4db6ac">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
-      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link href="assets/css/styles.css" rel="stylesheet" />
       <link rel="shortcut icon" type="image/png" href="assets/img/logo-black-white.png">
       <meta name="keywords" content="cerveza, artesanal, baldwin, cordoba">
       <meta name="author" content="Martín Iván Ríos">
       <title>Cerveza Balwin</title>
       <meta name="description" content="Amor, alegría y, siempre, cerveza bien fría! Cerveza Artesanal elaborada en el corazón de Córdoba">
+      
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="assets/css/form-elements.css">
+      <link href="assets/css/styles.css" rel="stylesheet" />
+
+      <!-- JS -->
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
    </head>
    <body>
 
       <!-- Header -->
       <nav id="header-container" class="navbar fixed-top navbar-expand-lg navbar-light d-block bg-light">
          <div class="container">
-            <span class="navbar-brand" href="#"></span>
+            <span class="navbar-brand brand" href="#"></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <img src="assets/img/menu.svg">
@@ -52,11 +57,33 @@
                   </li>
                </ul>
                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Login</a>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Login</a>
+                     
+                     <!-- Login form -->
+                     <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                          <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="example@gmail.com">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">Recordar</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item launch-modal" href="#" data-modal-id="modal-register">No tienes un usuario? Registrate!</a>
+                        <a class="dropdown-item" href="#">Olvidaste tu contraeña?</a>
+                      </div>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Register</a>
+                     <a class="nav-link launch-modal" href="#" data-modal-id="modal-register">Register</a>
                   </li>
                </ul>
             </div>
@@ -185,7 +212,7 @@
       <!-- Footer -->
       <footer class="bgDark">
          <div class="container">
-            <span class="footer-brand" href="#"></span>
+            <span class="footer-brand brand" href="#"></span>
             <ul class="list-inline">
                <li class="list-inline-item footer-menu"><a href="#">Home</a></li>
                <li class="list-inline-item footer-menu"><a href="#new-beer">News</a></li>
@@ -205,9 +232,53 @@
       </footer>
 
       <!-- FAB -->
-      <button onclick="topFunction()" id="go-top"></button>
+      <button onclick="topFunction()" id="go-top" class="rounded-lg"></button>
 
+      <!-- Register modal -->
+      <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               
+               <div class="modal-header">
+                  <h3 class="modal-title" id="modal-register-label">Sign up now</h3>
+                  <button type="button" class="close" data-dismiss="modal">
+                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                  </button>
+               </div>
+               
+               <div class="modal-body">
+                  
+                     <form role="form" action="" method="post" class="registration-form">
+                        <div class="form-group">
+                           <label class="sr-only" for="form-first-name">Nombre</label>
+                            <input type="text" name="form-first-name" placeholder="Nombre" class="form-first-name form-control" id="form-first-name">
+                         </div>
+                         <div class="form-group">
+                            <label class="sr-only" for="form-last-name">Apellido</label>
+                            <input type="text" name="form-last-name" placeholder="Apellido" class="form-last-name form-control" id="form-last-name">
+                         </div>
+                         <div class="form-group">
+                            <label class="sr-only" for="form-email">Email</label>
+                            <input type="email" name="form-email" placeholder="Email" class="form-email form-control" id="form-email">
+                         </div>
+                         <div class="form-group">
+                           <label class="sr-only" for="form-password">Contraseña</label>
+                           <input type="password" name="form-passwork" placeholder="Contraseña" class="form-password form-control" id="form-password">
+                        </div>
+                         <button type="submit" class="btn-primary btn-register">Registrarse</button>
+                     </form>
+                     
+               </div>
+               
+            </div>
+         </div>
+      </div>
 
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="assets/js/scroll.js"></script>
+      <script src="assets/js/scripts.js"></script>
       <script>
          var mybutton = document.getElementById("go-top");
          
@@ -226,9 +297,5 @@
            document.documentElement.scrollTop = 0;
          }
       </script>
-      <script src="assets/js/scroll.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    </body>
 </html>
