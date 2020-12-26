@@ -15,10 +15,8 @@ $url_2: url(../img/logo-white-transp.png);
 $url_3: url(../img/up-arrow.png);
 
 * {
-	//Instead of the line below you could use @include box-sizing($bs)
+	//Instead of the line below you could use 
 	box-sizing: border-box;
-	&:root {
-	}
 }
 html {
 	scroll-behavior: smooth;
