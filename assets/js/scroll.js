@@ -9,7 +9,7 @@
     var prevDirection = 0;
 
     /* Find the navbar and the height of the navbar */
-    var header = document.getElementById("header-container");
+    var header = document.getElementById("nav-container");
     var headerHeight = header.clientHeight;
 
     var checkScroll = function() {

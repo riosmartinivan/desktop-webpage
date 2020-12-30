@@ -1,11 +1,6 @@
 // Carousel
-.carousel-item img {
-	height: 500px;
-	width: 100%;
-}
-
-@media(max-width: 992px) {
-	#carouselExampleIndicators {
-		display: none !important;
+.carousel-item {
+	img {
+		height: 500px;
 	}
 }

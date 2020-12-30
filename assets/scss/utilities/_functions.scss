@@ -45,3 +45,19 @@
 		color: $main-color-dark;
 	}
 }
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin transition($transition) {
+	transition: $transition;
+}
+
+@mixin box-shadow($values, $color) {
+	box-shadow: $values $color;
+}
+
+@mixin box-sizing($type) {
+	box-sizing: $type;
+}

@@ -6,23 +6,25 @@ section {
 .bgDark {
 	background-color: $dark-color;
 }
+
 .bgLightGrey {
 	background-color: $light-grey-color;
 }
 
-#main {
+#home {
 	background-image: $main_background;
 	background-size: cover;
 	min-height: 700px;
 	color: white;
 	margin-bottom: 32px;
 	margin-top: 100px;
+
 	p {
 		color: white;
 	}
 }
 
-.content-center {
+.home_content-center {
 	max-width: 800px;
 	margin: 0 auto 60px auto;
 	text-align: center;
@@ -35,7 +37,7 @@ section {
 	margin-bottom: 56px;
 }
 
-.beer-details {
+.new-beer-container_details {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -43,9 +45,11 @@ section {
 	top: 100%;
 	color: $black;
 	bottom: 0;
+
 	h5 {
 		margin: 0 0 8px;
 	}
+	
 	span {
 		font-size: 14px;
 		color: $black;

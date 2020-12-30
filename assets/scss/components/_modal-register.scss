@@ -95,7 +95,7 @@ input[type="text"] {
 	}
 }
 
-input[type="number"] {
+input[type="tel"] {
 	@extend %extend_1;
 
 	&:focus {
@@ -147,7 +147,7 @@ input[type="text"]::-webkit-input-placeholder {
 	color: $color_gray;
 }
 
-input[type="number"]::-webkit-input-placeholder {
+input[type="tel"]::-webkit-input-placeholder {
 	color: $color_gray;
 }
 
