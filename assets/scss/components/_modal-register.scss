@@ -1,24 +1,23 @@
 // Modal Register
 .modal-content {
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 4px;
+	@include border-radius(4px);
+
 	border: 0;
 	text-align: left;
 }
 
 .modal-header {
+	@include border-radius(4px 4px 0 0);
+
 	padding: 25px 25px 15px 25px;
 	background: white;
 	border: 0;
 	border-bottom: 1px solid $color_alto;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 4px 4px 0 0;
     
 	.close {
 		font-size: 36px;
 		color: $color_gray;
 		font-weight: 300;
-		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		text-shadow: none;
 		opacity: 1;
 	}
@@ -30,11 +29,11 @@
 }
 
 .modal-body {
+	@include border-radius(0 0 4px 4px);
+
 	padding: 25px 25px 30px 25px;
 	background: $color_gallery;
 	text-align: left;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 0 0 4px 4px;
     
 	img {
 		margin-bottom: 15px;
@@ -45,12 +44,15 @@
 	}
 }
 
-//@extend-elements
-//original selectors
-//input[type="text"], input[type="number"], input[type="email"], input[type="password"]
-%extend_1 {
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"]
+ {
+	@include border-radius(4px);
+	@include transition(all .3s);
+
 	height: 50px;
-	margin: 0;
 	padding: 0 20px;
 	vertical-align: middle;
 	background: $color_alabaster;
@@ -60,30 +62,13 @@
 	font-weight: 300;
 	line-height: 50px;
 	color: $color_gray;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 4px;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 	box-shadow: none;
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-	transition: all .3s;
-}
-
-//original selectors
-//input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="password"]:focus
-%extend_2 {
-	outline: 0;
-	background: white;
-	border: 3px solid $color_silver;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: none;
-}
-
-
-input[type="text"] {
-	@extend %extend_1;
 	
 	&:focus {
-		@extend %extend_2;
+		outline: 0;
+		background: white;
+		border: 3px solid $color_silver;
+		box-shadow: none;
 	}
 
 	&:-moz-placeholder {
@@ -95,66 +80,9 @@ input[type="text"] {
 	}
 }
 
-input[type="tel"] {
-	@extend %extend_1;
-
-	&:focus {
-		@extend %extend_2;
-	}
-
-	&:-moz-placeholder {
-		color: $color_gray;
-	}
-
-	&:-ms-input-placeholder {
-		color: $color_gray;
-	}
-}
-
-input[type="email"] {
-	@extend %extend_1;
-
-	&:focus {
-		@extend %extend_2;
-	}
-
-	&:-moz-placeholder {
-		color: $color_gray;
-	}
-
-	&:-ms-input-placeholder {
-		color: $color_gray;
-	}
-}
-
-input[type="password"] {
-	@extend %extend_1;
-
-	&:focus {
-		@extend %extend_2;
-	}
-
-	&:-moz-placeholder {
-		color: $color_gray;
-	}
-
-	&:-ms-input-placeholder {
-		color: $color_gray;
-	}
-}
-
-input[type="text"]::-webkit-input-placeholder {
-	color: $color_gray;
-}
-
-input[type="tel"]::-webkit-input-placeholder {
-	color: $color_gray;
-}
-
-input[type="email"]::-webkit-input-placeholder {
-	color: $color_gray;
-}
-
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
 	color: $color_gray;
 }
