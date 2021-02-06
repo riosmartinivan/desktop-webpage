@@ -218,7 +218,7 @@ section {
 .new-beer_carousel-inner .carousel-item.active {
   display: flex; }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .new-beer_carousel-inner .carousel-item-right {
     transform: translateX(0); }
     .new-beer_carousel-inner .carousel-item-right.active {
@@ -231,6 +231,10 @@ section {
       transform: translateX(-100%); }
   .new-beer_carousel-inner .carousel-item-prev {
     transform: translateX(-1100%); } }
+
+@media (max-width: 992px) {
+  #homeCarousel {
+    display: none; } }
 
 .modal-content {
   border-radius: 4px;
