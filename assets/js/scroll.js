@@ -20,10 +20,10 @@
          */
         curScroll = w.scrollY || doc.scrollTop;
         if (curScroll > prevScroll) {
-            //scrolled up
+            //scrolled down
             direction = 2;
         } else if (curScroll < prevScroll) {
-            //scrolled down
+            //scrolled up
             direction = 1;
         }
 

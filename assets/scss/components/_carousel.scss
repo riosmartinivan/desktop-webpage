@@ -1,6 +1,63 @@
 // Carousel
 .carousel-item {
 	img {
+		margin: auto;
 		height: 500px;
+		object-fit: cover;
+	}
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+}
+
+// New beer carousel
+.new-beer_carousel-inner {
+	.carousel-item-next {
+		display: flex;
+		@include transform(translateX(33%));
+	}
+	.carousel-item-prev {
+		display: flex;
+		@include transform(translateX(-33%));
+	}
+	.carousel-item-right {
+		@include transform(translateX(0));
+		&.active {
+			@include transform(translateX(33%));
+		}
+	}
+	.carousel-item-left {
+		@include transform(translateX(0));
+		&.active {
+			@include transform(translateX(-33%));
+		}
+	}
+	.carousel-item.active {
+		display: flex;
+	}
+}
+
+@media(min-width: 576px) and(max-width: 768px) {
+	.new-beer_carousel-inner {
+		.carousel-item-right {
+			@include transform(translateX(0));
+			&.active {
+				@include transform(translateX(100%));
+			}
+		}
+		.carousel-item-next {
+			@include transform(translateX(100%));
+		}
+		.carousel-item-left {
+			@include transform(translateX(0));
+			&.active {
+				@include transform(translateX(-100%));
+			}
+		}
+		.carousel-item-prev {
+			@include transform(translateX(-1100%));
+		}
 	}
 }

@@ -1,49 +1,6 @@
 // Functions
-@keyframes bounce {
-	0% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(0);
-    }
-    
-	100% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(0);
-    }
-    
-	20% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(0);
-    }
-    
-	50% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(0);
-    }
-    
-	80% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(0);
-    }
-    
-	40% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(-10px);
-    }
-    
-	60% {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translateY(-5px);
-	}
-}
-
-@keyframes color_change {
-	from {
-		color: $main-color-light;
-    }
-    
-	to {
-		color: $main-color-dark;
-	}
+@mixin transform($translate) {
+	transform: $translate;
 }
 
 @mixin border-radius($radius) {
@@ -60,4 +17,44 @@
 
 @mixin box-sizing($type) {
 	box-sizing: $type;
+}
+
+@keyframes bounce {
+	0% {
+		@include transform(translateY(0));
+    }
+    
+	20% {
+		@include transform(translateY(0));
+    }
+    
+	40% {
+		@include transform(translateY(-10px));
+	}
+	
+	50% {
+		@include transform(translateY(0));
+    }
+    
+	60% {
+		@include transform(translateY(-5px));
+	}
+
+	80% {
+		@include transform(translateY(0));
+    }
+
+	100% {
+		@include transform(translateY(0));
+    }
+}
+
+@keyframes color_change {
+	from {
+		color: $main-color-light;
+    }
+    
+	to {
+		color: $main-color-dark;
+	}
 }
